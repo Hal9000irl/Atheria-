@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "databases": {
+      "documents": {
+        // Users can only access their own documents.
+        "users/{userId}/{document=**}": {
+          "allow read, write": "request.auth != null && request.auth.uid == userId"
+        }
+      }
+    }
+  }
+}

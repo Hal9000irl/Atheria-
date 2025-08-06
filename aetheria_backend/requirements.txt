@@ -1,0 +1,16 @@
+# Backend Python dependencies – pinned versions to ensure compatibility and reproducible builds
+flask==2.3.3            # Web framework
+python-dotenv==1.0.1    # .env loader (bentoml requires ≥1.0.1)
+firebase-admin==6.9.0   # Firebase SDK
+anthropic==0.25.0       # Anthropic API client
+
+# Machine-learning stack (aligned around torch 2.1.x)
+torch==2.1.0            # CPU build; use +cuNNN if GPU is needed
+torchvision==0.16.0
+torchaudio==2.1.0
+transformers==4.38.2    # Works with torch 2.1.x
+
+# Scientific computing
+numpy==1.26.4           # Compatible with torch 2.1 / numba, <2.3
+scipy==1.11.4
+sounddevice==0.4.6      # Audio capture / playback
